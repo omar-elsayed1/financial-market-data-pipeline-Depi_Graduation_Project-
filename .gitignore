@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-specific
+logs/pipeline.log
+logs/*.log
+airflow.cfg
+airflow.db
+airflow-webserver.pid
