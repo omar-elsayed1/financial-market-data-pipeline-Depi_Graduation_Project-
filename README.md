@@ -1,6 +1,6 @@
 # Financial Market Data Pipeline
 
-An automated data engineering pipeline that ingests historical and daily financial market data from a configurable REST provider (default Alpha Vantage), validates it, stores raw and transformed data separately in PostgreSQL, computes analytics with Pandas, and orchestrates daily runs using Apache Airflow.
+An automated data engineering pipeline that ingests historical and daily financial market data from Twelve Data, validates it, stores raw and transformed data separately in PostgreSQL, computes analytics with Pandas, and orchestrates daily runs using Apache Airflow.
 
 ## Architecture Overview
 - **Ingestion**: Provider API client with retry/backoff and payload validation.
@@ -39,7 +39,7 @@ See:
 3. Trigger a run from the UI.
 
 ## Project structure
-- `ingestion/`: API client, incremental extract, raw loading, optional MongoDB extension (disabled by default)
+- `ingestion/`: Twelve Data provider client, incremental extract, raw loading, optional MongoDB extension (disabled by default)
 - `transform/`: cleaning, metrics, and data quality
 - `sql/`: schema, upsert template, analytics SQL examples
 - `dags/`: Airflow DAG definition
