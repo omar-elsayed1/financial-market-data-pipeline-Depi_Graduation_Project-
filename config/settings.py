@@ -53,7 +53,7 @@ def load_settings() -> Settings:
         ValueError: When required variables are missing.
     """
     required = {
-        "API_BASE_URL": os.getenv("API_BASE_URL", "https://www.alphavantage.co/query"),
+        "API_BASE_URL": os.getenv("API_BASE_URL", "https://api.twelvedata.com"),
         "API_KEY": os.getenv("API_KEY", ""),
         "DB_HOST": os.getenv("DB_HOST", ""),
         "DB_PORT": os.getenv("DB_PORT", "5432"),
@@ -67,7 +67,7 @@ def load_settings() -> Settings:
         raise ValueError(f"Missing required environment variables: {', '.join(missing)}")
 
     return Settings(
-        api_provider=os.getenv("API_PROVIDER", "alpha_vantage"),
+        api_provider=os.getenv("API_PROVIDER", "twelve_data"),
         api_base_url=required["API_BASE_URL"],
         api_key=required["API_KEY"],
         db_host=required["DB_HOST"],

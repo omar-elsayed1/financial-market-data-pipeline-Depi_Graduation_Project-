@@ -10,6 +10,6 @@ flowchart LR
 ```
 
 ## Notes
-- Provider is configurable (default Alpha Vantage).
+- Ingestion uses Twelve Data's daily time-series endpoint.
 - Raw and transformed layers are stored separately.
 - Pipeline is designed to be idempotent via unique keys and upserts.
